@@ -8,6 +8,7 @@
     "build": "pnpm --filter observatorio-web build",
     "preview": "pnpm --filter observatorio-web preview",
     "check": "pnpm --filter observatorio-web check",
-    "all": "pnpm pipeline && pnpm build"
+    "all": "pnpm pipeline && pnpm build",
+    "deploy": "bash web/scripts-deploy.sh"
   }
 }
