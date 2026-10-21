@@ -1,0 +1,13 @@
+{
+  "name": "observatorio",
+  "private": true,
+  "packageManager": "pnpm@11.1.1",
+  "scripts": {
+    "pipeline": "cd pipeline && uv run python run.py",
+    "dev": "pnpm --filter observatorio-web dev",
+    "build": "pnpm --filter observatorio-web build",
+    "preview": "pnpm --filter observatorio-web preview",
+    "check": "pnpm --filter observatorio-web check",
+    "all": "pnpm pipeline && pnpm build"
+  }
+}

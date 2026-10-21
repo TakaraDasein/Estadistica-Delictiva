@@ -1,0 +1,633 @@
+{
+  "periodo": [
+    2010,
+    2024
+  ],
+  "delitos_total": 9148884.0,
+  "delitos_categorias": 18,
+  "filas_procesadas": 8717618,
+  "archivos_conciliados": 99,
+  "ene_oct_por_anio": {
+    "2010": 222027.0,
+    "2011": 258979.0,
+    "2012": 315576.0,
+    "2013": 331893.0,
+    "2014": 356960.0,
+    "2015": 411830.0,
+    "2016": 529819.0,
+    "2017": 627784.0,
+    "2018": 700120.0,
+    "2019": 709528.0,
+    "2020": 533401.0,
+    "2021": 654024.0,
+    "2022": 728704.0,
+    "2023": 711242.0,
+    "2024": 696557.0
+  },
+  "mas_frecuente": {
+    "categoria_slug": "hurto-personas",
+    "categoria": "Hurto a personas",
+    "cantidad": 2879323.0
+  },
+  "crecen_mas": [
+    {
+      "categoria_slug": "extorsion",
+      "tcac_pct": 17.10636969666972,
+      "desde": 2010,
+      "hasta": 2024
+    },
+    {
+      "categoria_slug": "violencia-intrafamiliar",
+      "tcac_pct": 13.391422835492062,
+      "desde": 2010,
+      "hasta": 2024
+    },
+    {
+      "categoria_slug": "hurto-personas",
+      "tcac_pct": 12.24404831767445,
+      "desde": 2010,
+      "hasta": 2024
+    },
+    {
+      "categoria_slug": "amenazas",
+      "tcac_pct": 11.583143919552551,
+      "desde": 2010,
+      "hasta": 2024
+    }
+  ],
+  "homicidios_tasa": {
+    "2010": 34.053669108756075,
+    "2011": 35.46978305771212,
+    "2012": 35.62764508821259,
+    "2013": 32.95041072133425,
+    "2014": 28.25185796628048,
+    "2015": 26.903371424275278,
+    "2016": 25.974738136459024,
+    "2017": 25.472804264939096,
+    "2019": 25.621674835599986,
+    "2020": 24.057857729403636,
+    "2021": 27.141454712328947,
+    "2024": 25.31693516040853
+  },
+  "covid": {
+    "abigeato": {
+      "categoria_slug": "abigeato",
+      "observado_2020": 2240.0,
+      "esperado_2020": 4487.099999999977,
+      "desvio_pct": -50.07911568719192,
+      "abril_2020_vs_2019_pct": -45.70446735395189
+    },
+    "amenazas": {
+      "categoria_slug": "amenazas",
+      "observado_2020": 42276.0,
+      "esperado_2020": 64667.0,
+      "desvio_pct": -34.6250792521688,
+      "abril_2020_vs_2019_pct": -57.12895377128954
+    },
+    "armas": {
+      "categoria_slug": "armas",
+      "observado_2020": 17138.0,
+      "esperado_2020": 18237.30000000028,
+      "desvio_pct": -6.027756301646969,
+      "abril_2020_vs_2019_pct": -55.90858416945373
+    },
+    "capturas": {
+      "categoria_slug": "capturas",
+      "observado_2020": 173203.0,
+      "esperado_2020": 228405.0,
+      "desvio_pct": -24.168472669162234,
+      "abril_2020_vs_2019_pct": -64.71814052898745
+    },
+    "delitos-sexuales": {
+      "categoria_slug": "delitos-sexuales",
+      "observado_2020": 30924.0,
+      "esperado_2020": 43467.300000000745,
+      "desvio_pct": -28.856864815621243,
+      "abril_2020_vs_2019_pct": -45.64820450395618
+    },
+    "droga": {
+      "categoria_slug": "droga",
+      "observado_2020": 681615857.03,
+      "esperado_2020": 619121117.8999939,
+      "desvio_pct": 10.094105551104903,
+      "abril_2020_vs_2019_pct": -18.150414433710395
+    },
+    "extorsion": {
+      "categoria_slug": "extorsion",
+      "observado_2020": 8188.0,
+      "esperado_2020": 8478.314285714412,
+      "desvio_pct": -3.4241982065182364,
+      "abril_2020_vs_2019_pct": -29.047619047619044
+    },
+    "homicidios": {
+      "categoria_slug": "homicidios",
+      "observado_2020": 12127.0,
+      "esperado_2020": 12550.628571428562,
+      "desvio_pct": -3.375357409532065,
+      "abril_2020_vs_2019_pct": -34.12698412698413
+    },
+    "homicidios-transito": {
+      "categoria_slug": "homicidios-transito",
+      "observado_2020": 5068.0,
+      "esperado_2020": 6205.399999999965,
+      "desvio_pct": -18.329197150868136,
+      "abril_2020_vs_2019_pct": -62.82051282051282
+    },
+    "hurto-automotores": {
+      "categoria_slug": "hurto-automotores",
+      "observado_2020": 9258.0,
+      "esperado_2020": 11364.699999999953,
+      "desvio_pct": -18.53722491574755,
+      "abril_2020_vs_2019_pct": -76.34032634032634
+    },
+    "hurto-comercio": {
+      "categoria_slug": "hurto-comercio",
+      "observado_2020": 44221.0,
+      "esperado_2020": 82879.80000000075,
+      "desvio_pct": -46.64441757822823,
+      "abril_2020_vs_2019_pct": -58.787647731605034
+    },
+    "hurto-financieras": {
+      "categoria_slug": "hurto-financieras",
+      "observado_2020": 97.0,
+      "esperado_2020": 180.59999999999854,
+      "desvio_pct": -46.290143964562134,
+      "abril_2020_vs_2019_pct": -90.9090909090909
+    },
+    "hurto-motos": {
+      "categoria_slug": "hurto-motos",
+      "observado_2020": 27137.0,
+      "esperado_2020": 37281.19999999972,
+      "desvio_pct": -27.209961052755272,
+      "abril_2020_vs_2019_pct": -68.8183807439825
+    },
+    "hurto-personas": {
+      "categoria_slug": "hurto-personas",
+      "observado_2020": 208037.0,
+      "esperado_2020": 360704.200000003,
+      "desvio_pct": -42.32476361517325,
+      "abril_2020_vs_2019_pct": -72.74709607078458
+    },
+    "hurto-residencias": {
+      "categoria_slug": "hurto-residencias",
+      "observado_2020": 33603.0,
+      "esperado_2020": 59283.90000000037,
+      "desvio_pct": -43.3185063735689,
+      "abril_2020_vs_2019_pct": -63.24028176363162
+    },
+    "lesiones-personales": {
+      "categoria_slug": "lesiones-personales",
+      "observado_2020": 82597.0,
+      "esperado_2020": 143617.80000000075,
+      "desvio_pct": -42.48832665588835,
+      "abril_2020_vs_2019_pct": -62.17118997912318
+    },
+    "lesiones-transito": {
+      "categoria_slug": "lesiones-transito",
+      "observado_2020": 27481.0,
+      "esperado_2020": 45337.90000000037,
+      "desvio_pct": -39.3862530024554,
+      "abril_2020_vs_2019_pct": -76.18476304739052
+    },
+    "motos": {
+      "categoria_slug": "motos",
+      "observado_2020": 8043.0,
+      "esperado_2020": 10749.300000000047,
+      "desvio_pct": -25.1765231224362,
+      "abril_2020_vs_2019_pct": -77.96052631578947
+    },
+    "pirateria-terrestre": {
+      "categoria_slug": "pirateria-terrestre",
+      "observado_2020": 263.0,
+      "esperado_2020": 394.59999999999854,
+      "desvio_pct": -33.350228079067165,
+      "abril_2020_vs_2019_pct": -53.125
+    },
+    "secuestro": {
+      "categoria_slug": "secuestro",
+      "observado_2020": 162.0,
+      "esperado_2020": 94.69999999999709,
+      "desvio_pct": 71.06652587117739,
+      "abril_2020_vs_2019_pct": -62.5
+    },
+    "terrorismo": {
+      "categoria_slug": "terrorismo",
+      "observado_2020": 368.0,
+      "esperado_2020": 85.89999999999418,
+      "desvio_pct": 328.4051222351862,
+      "abril_2020_vs_2019_pct": 8.000000000000007
+    },
+    "vehiculos": {
+      "categoria_slug": "vehiculos",
+      "observado_2020": 2842.0,
+      "esperado_2020": 3286.600000000035,
+      "desvio_pct": -13.527657761821644,
+      "abril_2020_vs_2019_pct": -74.19354838709677
+    },
+    "violencia-intrafamiliar": {
+      "categoria_slug": "violencia-intrafamiliar",
+      "observado_2020": 118777.0,
+      "esperado_2020": 123297.5,
+      "desvio_pct": -3.666335489365158,
+      "abril_2020_vs_2019_pct": -0.13920526449000548
+    }
+  },
+  "concentracion_hurto_personas": {
+    "gini": 0.9485173538499881,
+    "top10_pct": 67.01576517519234
+  },
+  "estacionalidad_vif": {
+    "categoria_slug": "violencia-intrafamiliar",
+    "fuerza_estacional": 0.6691362214035685,
+    "mes_pico": 5,
+    "mes_valle": 12,
+    "indice_mes": [
+      105.18,
+      106.9,
+      108.17,
+      102.74,
+      110.55,
+      99.72,
+      101.28,
+      102.47,
+      107.08,
+      96.32,
+      87.79,
+      79.61
+    ]
+  },
+  "fin_de_semana_homicidios_pct": 36.62586888373995,
+  "fin_de_semana_lesiones_pct": 40.357542756881394,
+  "respuesta_rho": 0.6407085561497327,
+  "tendencias": {
+    "abigeato": {
+      "categoria_slug": "abigeato",
+      "anios": 14,
+      "tau": 0.2967032967032967,
+      "p_valor": 0.15716301603764402,
+      "direccion": "sin tendencia",
+      "sen_pendiente_anual": 86.7,
+      "sen_ic95": [
+        -74.08333333333333,
+        232.0
+      ],
+      "sen_pendiente_pct_media": 3.4956656970883855,
+      "tcac_pct": -1.9645701754027578,
+      "desde": 2010,
+      "hasta": 2024
+    },
+    "amenazas": {
+      "categoria_slug": "amenazas",
+      "anios": 14,
+      "tau": 0.6703296703296704,
+      "p_valor": 0.00045112620881470087,
+      "direccion": "creciente",
+      "sen_pendiente_anual": 3606.818181818182,
+      "sen_ic95": [
+        1933.1,
+        5485.333333333333
+      ],
+      "sen_pendiente_pct_media": 8.379319396212297,
+      "tcac_pct": 11.583143919552551,
+      "desde": 2010,
+      "hasta": 2024
+    },
+    "armas": {
+      "categoria_slug": "armas",
+      "anios": 13,
+      "tau": -0.9487179487179485,
+      "p_valor": 2.8906278906278905e-08,
+      "direccion": "decreciente",
+      "sen_pendiente_anual": -2284.208333333333,
+      "sen_ic95": [
+        -2614.285714285714,
+        -1909.0
+      ],
+      "sen_pendiente_pct_media": -8.230696915941385,
+      "tcac_pct": -7.759836749050031,
+      "desde": 2010,
+      "hasta": 2022
+    },
+    "capturas": {
+      "categoria_slug": "capturas",
+      "anios": 13,
+      "tau": -0.4358974358974358,
+      "p_valor": 0.04218179261582039,
+      "direccion": "decreciente",
+      "sen_pendiente_anual": -5945.888888888889,
+      "sen_ic95": [
+        -10715.75,
+        -874.0
+      ],
+      "sen_pendiente_pct_media": -2.5523749059510483,
+      "tcac_pct": -1.350990567424637,
+      "desde": 2010,
+      "hasta": 2022
+    },
+    "delitos-sexuales": {
+      "categoria_slug": "delitos-sexuales",
+      "anios": 14,
+      "tau": 0.7142857142857144,
+      "p_valor": 0.00014457073918879473,
+      "direccion": "creciente",
+      "sen_pendiente_anual": 2293.5,
+      "sen_ic95": [
+        1607.5,
+        3352.8333333333335
+      ],
+      "sen_pendiente_pct_media": 9.895189697094835,
+      "tcac_pct": 11.313345029064292,
+      "desde": 2010,
+      "hasta": 2024
+    },
+    "droga": {
+      "categoria_slug": "droga",
+      "anios": 12,
+      "tau": 0.6666666666666666,
+      "p_valor": 0.0018032758136924804,
+      "direccion": "creciente",
+      "sen_pendiente_anual": 29158948.352999996,
+      "sen_ic95": [
+        13719351.25,
+        45365571.5
+      ],
+      "sen_pendiente_pct_media": 5.854048539274404,
+      "tcac_pct": 6.812236837191543,
+      "desde": 2010,
+      "hasta": 2021
+    },
+    "extorsion": {
+      "categoria_slug": "extorsion",
+      "anios": 13,
+      "tau": 0.9487179487179485,
+      "p_valor": 2.8906278906278905e-08,
+      "direccion": "creciente",
+      "sen_pendiente_anual": 684.0272727272727,
+      "sen_ic95": [
+        567.5,
+        821.25
+      ],
+      "sen_pendiente_pct_media": 11.408352635740826,
+      "tcac_pct": 17.10636969666972,
+      "desde": 2010,
+      "hasta": 2024
+    },
+    "homicidios": {
+      "categoria_slug": "homicidios",
+      "anios": 12,
+      "tau": -0.4242424242424242,
+      "p_valor": 0.06286914699241088,
+      "direccion": "sin tendencia",
+      "sen_pendiente_anual": -208.61666666666667,
+      "sen_ic95": [
+        -482.42857142857144,
+        16.0
+      ],
+      "sen_pendiente_pct_media": -1.5313281828247054,
+      "tcac_pct": -0.8398426806800363,
+      "desde": 2010,
+      "hasta": 2024
+    },
+    "homicidios-transito": {
+      "categoria_slug": "homicidios-transito",
+      "anios": 14,
+      "tau": 0.7802197802197802,
+      "p_valor": 1.9192943300086156e-05,
+      "direccion": "creciente",
+      "sen_pendiente_anual": 219.0,
+      "sen_ic95": [
+        168.8,
+        270.4
+      ],
+      "sen_pendiente_pct_media": 3.92548492414058,
+      "tcac_pct": 3.32543422432916,
+      "desde": 2010,
+      "hasta": 2024
+    },
+    "hurto-automotores": {
+      "categoria_slug": "hurto-automotores",
+      "anios": 13,
+      "tau": 0.5128205128205127,
+      "p_valor": 0.014950091061202172,
+      "direccion": "creciente",
+      "sen_pendiente_anual": 190.16363636363636,
+      "sen_ic95": [
+        38.1,
+        360.77777777777777
+      ],
+      "sen_pendiente_pct_media": 1.9906810586844403,
+      "tcac_pct": 0.5255534978865661,
+      "desde": 2011,
+      "hasta": 2024
+    },
+    "hurto-comercio": {
+      "categoria_slug": "hurto-comercio",
+      "anios": 14,
+      "tau": 0.5824175824175825,
+      "p_valor": 0.003024811732028994,
+      "direccion": "creciente",
+      "sen_pendiente_anual": 2570.375,
+      "sen_ic95": [
+        1069.0,
+        3891.3333333333335
+      ],
+      "sen_pendiente_pct_media": 7.2553979099921575,
+      "tcac_pct": 7.402984893196951,
+      "desde": 2010,
+      "hasta": 2024
+    },
+    "hurto-financieras": {
+      "categoria_slug": "hurto-financieras",
+      "anios": 13,
+      "tau": 0.4358974358974358,
+      "p_valor": 0.04218179261582039,
+      "direccion": "creciente",
+      "sen_pendiente_anual": 4.791666666666666,
+      "sen_ic95": [
+        0.2,
+        11.714285714285714
+      ],
+      "sen_pendiente_pct_media": 3.9650965414810098,
+      "tcac_pct": 5.946309435929531,
+      "desde": 2010,
+      "hasta": 2022
+    },
+    "hurto-motos": {
+      "categoria_slug": "hurto-motos",
+      "anios": 14,
+      "tau": 0.8461538461538461,
+      "p_valor": 1.5144366582858646e-06,
+      "direccion": "creciente",
+      "sen_pendiente_anual": 1602.857142857143,
+      "sen_ic95": [
+        1187.1666666666667,
+        2096.9166666666665
+      ],
+      "sen_pendiente_pct_media": 5.604423598519474,
+      "tcac_pct": 7.769181215007714,
+      "desde": 2010,
+      "hasta": 2024
+    },
+    "hurto-personas": {
+      "categoria_slug": "hurto-personas",
+      "anios": 14,
+      "tau": 0.8901098901098902,
+      "p_valor": 1.809854240409796e-07,
+      "direccion": "creciente",
+      "sen_pendiente_anual": 21317.6,
+      "sen_ic95": [
+        14841.0,
+        28317.2
+      ],
+      "sen_pendiente_pct_media": 11.608355160441887,
+      "tcac_pct": 12.24404831767445,
+      "desde": 2010,
+      "hasta": 2024
+    },
+    "hurto-residencias": {
+      "categoria_slug": "hurto-residencias",
+      "anios": 14,
+      "tau": 0.4945054945054945,
+      "p_valor": 0.013837794930304851,
+      "direccion": "creciente",
+      "sen_pendiente_anual": 1264.3333333333333,
+      "sen_ic95": [
+        545.4166666666666,
+        2014.5
+      ],
+      "sen_pendiente_pct_media": 4.257659690301,
+      "tcac_pct": 3.672433347566817,
+      "desde": 2010,
+      "hasta": 2024
+    },
+    "lesiones-personales": {
+      "categoria_slug": "lesiones-personales",
+      "anios": 14,
+      "tau": 0.4725274725274726,
+      "p_valor": 0.01927860024400203,
+      "direccion": "creciente",
+      "sen_pendiente_anual": 3349.5714285714284,
+      "sen_ic95": [
+        299.0,
+        7351.222222222223
+      ],
+      "sen_pendiente_pct_media": 3.460518111009029,
+      "tcac_pct": 3.806436335090524,
+      "desde": 2010,
+      "hasta": 2024
+    },
+    "lesiones-transito": {
+      "categoria_slug": "lesiones-transito",
+      "anios": 14,
+      "tau": 0.2087912087912088,
+      "p_valor": 0.3308114209974329,
+      "direccion": "sin tendencia",
+      "sen_pendiente_anual": 678.7,
+      "sen_ic95": [
+        -848.0,
+        1543.6
+      ],
+      "sen_pendiente_pct_media": 1.5241214703221544,
+      "tcac_pct": 1.9557818658193504,
+      "desde": 2010,
+      "hasta": 2024
+    },
+    "motos": {
+      "categoria_slug": "motos",
+      "anios": 13,
+      "tau": 0.30769230769230765,
+      "p_valor": 0.16348723839175228,
+      "direccion": "sin tendencia",
+      "sen_pendiente_anual": 291.55357142857144,
+      "sen_ic95": [
+        -159.0,
+        547.0
+      ],
+      "sen_pendiente_pct_media": 2.6749166715396764,
+      "tcac_pct": 4.673867068180737,
+      "desde": 2010,
+      "hasta": 2022
+    },
+    "pirateria-terrestre": {
+      "categoria_slug": "pirateria-terrestre",
+      "anios": 14,
+      "tau": -0.6187939745230095,
+      "p_valor": 0.0021383083879001354,
+      "direccion": "decreciente",
+      "sen_pendiente_anual": -20.571428571428573,
+      "sen_ic95": [
+        -30.666666666666668,
+        -12.0
+      ],
+      "sen_pendiente_pct_media": -6.336633663366337,
+      "tcac_pct": -8.074309070265794,
+      "desde": 2010,
+      "hasta": 2024
+    },
+    "secuestro": {
+      "categoria_slug": "secuestro",
+      "anios": 14,
+      "tau": -0.5303948353054367,
+      "p_valor": 0.008495852202373711,
+      "direccion": "decreciente",
+      "sen_pendiente_anual": -11.0,
+      "sen_ic95": [
+        -18.333333333333332,
+        -2.1666666666666665
+      ],
+      "sen_pendiente_pct_media": -4.833647206528562,
+      "tcac_pct": -0.07636574877124547,
+      "desde": 2010,
+      "hasta": 2024
+    },
+    "terrorismo": {
+      "categoria_slug": "terrorismo",
+      "anios": 14,
+      "tau": -0.18681318681318684,
+      "p_valor": 0.3879883441211566,
+      "direccion": "sin tendencia",
+      "sen_pendiente_anual": -14.153846153846153,
+      "sen_ic95": [
+        -45.27272727272727,
+        12.2
+      ],
+      "sen_pendiente_pct_media": -4.215142441051822,
+      "tcac_pct": -3.1769065728244006,
+      "desde": 2010,
+      "hasta": 2024
+    },
+    "vehiculos": {
+      "categoria_slug": "vehiculos",
+      "anios": 13,
+      "tau": -0.8205128205128204,
+      "p_valor": 1.346582943805166e-05,
+      "direccion": "decreciente",
+      "sen_pendiente_anual": -337.55,
+      "sen_ic95": [
+        -437.9,
+        -231.66666666666666
+      ],
+      "sen_pendiente_pct_media": -7.3025078630743385,
+      "tcac_pct": -3.9699948071820867,
+      "desde": 2010,
+      "hasta": 2022
+    },
+    "violencia-intrafamiliar": {
+      "categoria_slug": "violencia-intrafamiliar",
+      "anios": 14,
+      "tau": 0.9120879120879122,
+      "p_valor": 5.184777010173835e-08,
+      "direccion": "creciente",
+      "sen_pendiente_anual": 8756.5,
+      "sen_ic95": [
+        6317.25,
+        11250.333333333334
+      ],
+      "sen_pendiente_pct_media": 10.683218446898065,
+      "tcac_pct": 13.391422835492062,
+      "desde": 2010,
+      "hasta": 2024
+    }
+  },
+  "anios_completos_ultimo": 2024
+}

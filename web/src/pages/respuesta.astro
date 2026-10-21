@@ -1,0 +1,28 @@
+---
+import Base from "@/layouts/Base.astro";
+import TrendExplorer from "@/components/charts/TrendExplorer";
+import { DrogaTipos, ArmasClase, CapturasDelito, RecuperacionChart, ScatterRespuesta } from "@/components/charts/Respuesta";
+---
+<Base title="Respuesta institucional">
+  <section class="hero">
+    <div class="kicker">Capítulo 5 · Respuesta institucional</div>
+    <h1>Capturas, incautaciones y recuperaciones</h1>
+    <p class="lede">Resultados operativos de la Policía Nacional 2010–2023. Miden actividad institucional, no delincuencia.</p>
+  </section>
+  <section class="chapter">
+    <h2>Trayectorias operativas</h2>
+    <div class="card"><TrendExplorer client:visible dominio="operativos" inicial={["capturas", "armas", "motos"]} /></div>
+  </section>
+  <section class="chapter grid-2">
+    <div class="card"><h3>¿Por qué se captura?</h3><CapturasDelito client:visible /></div>
+    <div class="card"><h3>Armas incautadas por clase</h3><p class="sub">2010–2023</p><ArmasClase client:visible /></div>
+  </section>
+  <section class="chapter">
+    <h2>Estupefacientes incautados</h2>
+    <div class="card"><DrogaTipos client:visible /></div>
+  </section>
+  <section class="chapter grid-2">
+    <div class="card"><h3>Tasa de recuperación</h3><RecuperacionChart client:visible /></div>
+    <div class="card"><h3>Capturas vs. delitos por departamento</h3><ScatterRespuesta client:visible /></div>
+  </section>
+</Base>

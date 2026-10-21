@@ -1,0 +1,232 @@
+[
+  {
+    "dominio": "delitos",
+    "categoria_slug": "abigeato",
+    "categoria": "Abigeato (hurto de ganado)",
+    "cantidad": 35834.0,
+    "anio_min": 2010,
+    "anio_max": 2024,
+    "familia": "Patrimonio rural",
+    "ultimo_anio_completo": 2024
+  },
+  {
+    "dominio": "delitos",
+    "categoria_slug": "amenazas",
+    "categoria": "Amenazas",
+    "cantidad": 649229.0,
+    "anio_min": 2010,
+    "anio_max": 2024,
+    "familia": "Libertad y seguridad",
+    "ultimo_anio_completo": 2024
+  },
+  {
+    "dominio": "delitos",
+    "categoria_slug": "delitos-sexuales",
+    "categoria": "Delitos sexuales",
+    "cantidad": 343749.0,
+    "anio_min": 2010,
+    "anio_max": 2024,
+    "familia": "Vida e integridad",
+    "ultimo_anio_completo": 2024
+  },
+  {
+    "dominio": "delitos",
+    "categoria_slug": "extorsion",
+    "categoria": "Extorsión",
+    "cantidad": 86497.0,
+    "anio_min": 2010,
+    "anio_max": 2024,
+    "familia": "Libertad y seguridad",
+    "ultimo_anio_completo": 2024
+  },
+  {
+    "dominio": "delitos",
+    "categoria_slug": "homicidios",
+    "categoria": "Homicidios",
+    "cantidad": 183425.0,
+    "anio_min": 2010,
+    "anio_max": 2024,
+    "familia": "Vida e integridad",
+    "ultimo_anio_completo": 2024
+  },
+  {
+    "dominio": "delitos",
+    "categoria_slug": "homicidios-transito",
+    "categoria": "Homicidios en accidente de tránsito",
+    "cantidad": 84166.0,
+    "anio_min": 2010,
+    "anio_max": 2024,
+    "familia": "Seguridad vial",
+    "ultimo_anio_completo": 2024
+  },
+  {
+    "dominio": "delitos",
+    "categoria_slug": "hurto-automotores",
+    "categoria": "Hurto de automotores",
+    "cantidad": 133108.0,
+    "anio_min": 2011,
+    "anio_max": 2024,
+    "familia": "Patrimonio urbano",
+    "ultimo_anio_completo": 2024
+  },
+  {
+    "dominio": "delitos",
+    "categoria_slug": "hurto-comercio",
+    "categoria": "Hurto a comercio",
+    "cantidad": 526645.0,
+    "anio_min": 2010,
+    "anio_max": 2024,
+    "familia": "Patrimonio urbano",
+    "ultimo_anio_completo": 2024
+  },
+  {
+    "dominio": "delitos",
+    "categoria_slug": "hurto-financieras",
+    "categoria": "Hurto a entidades financieras",
+    "cantidad": 1681.0,
+    "anio_min": 2010,
+    "anio_max": 2024,
+    "familia": "Patrimonio urbano",
+    "ultimo_anio_completo": 2022
+  },
+  {
+    "dominio": "delitos",
+    "categoria_slug": "hurto-motos",
+    "categoria": "Hurto a motocicletas",
+    "cantidad": 433074.0,
+    "anio_min": 2010,
+    "anio_max": 2024,
+    "familia": "Patrimonio urbano",
+    "ultimo_anio_completo": 2024
+  },
+  {
+    "dominio": "delitos",
+    "categoria_slug": "hurto-personas",
+    "categoria": "Hurto a personas",
+    "cantidad": 2879323.0,
+    "anio_min": 2010,
+    "anio_max": 2024,
+    "familia": "Patrimonio urbano",
+    "ultimo_anio_completo": 2024
+  },
+  {
+    "dominio": "delitos",
+    "categoria_slug": "hurto-residencias",
+    "categoria": "Hurto a residencias",
+    "cantidad": 443741.0,
+    "anio_min": 2010,
+    "anio_max": 2024,
+    "familia": "Patrimonio urbano",
+    "ultimo_anio_completo": 2024
+  },
+  {
+    "dominio": "delitos",
+    "categoria_slug": "lesiones-personales",
+    "categoria": "Lesiones personales",
+    "cantidad": 1433395.0,
+    "anio_min": 2010,
+    "anio_max": 2024,
+    "familia": "Vida e integridad",
+    "ultimo_anio_completo": 2024
+  },
+  {
+    "dominio": "delitos",
+    "categoria_slug": "lesiones-transito",
+    "categoria": "Lesiones en accidente de tránsito",
+    "cantidad": 664226.0,
+    "anio_min": 2010,
+    "anio_max": 2024,
+    "familia": "Seguridad vial",
+    "ultimo_anio_completo": 2024
+  },
+  {
+    "dominio": "delitos",
+    "categoria_slug": "pirateria-terrestre",
+    "categoria": "Piratería terrestre",
+    "cantidad": 4628.0,
+    "anio_min": 2010,
+    "anio_max": 2024,
+    "familia": "Patrimonio urbano",
+    "ultimo_anio_completo": 2024
+  },
+  {
+    "dominio": "delitos",
+    "categoria_slug": "secuestro",
+    "categoria": "Secuestro",
+    "cantidad": 3473.0,
+    "anio_min": 2010,
+    "anio_max": 2024,
+    "familia": "Libertad y seguridad",
+    "ultimo_anio_completo": 2024
+  },
+  {
+    "dominio": "delitos",
+    "categoria_slug": "terrorismo",
+    "categoria": "Terrorismo",
+    "cantidad": 4875.0,
+    "anio_min": 2010,
+    "anio_max": 2024,
+    "familia": "Libertad y seguridad",
+    "ultimo_anio_completo": 2024
+  },
+  {
+    "dominio": "delitos",
+    "categoria_slug": "violencia-intrafamiliar",
+    "categoria": "Violencia intrafamiliar",
+    "cantidad": 1237815.0,
+    "anio_min": 2010,
+    "anio_max": 2024,
+    "familia": "Vida e integridad",
+    "ultimo_anio_completo": 2024
+  },
+  {
+    "dominio": "operativos",
+    "categoria_slug": "armas",
+    "categoria": "Incautación de armas de fuego",
+    "cantidad": 378893.0,
+    "anio_min": 2010,
+    "anio_max": 2023,
+    "familia": "Resultados operativos",
+    "ultimo_anio_completo": 2022
+  },
+  {
+    "dominio": "operativos",
+    "categoria_slug": "capturas",
+    "categoria": "Capturas",
+    "cantidad": 3201443.0,
+    "anio_min": 2010,
+    "anio_max": 2023,
+    "familia": "Resultados operativos",
+    "ultimo_anio_completo": 2022
+  },
+  {
+    "dominio": "operativos",
+    "categoria_slug": "droga",
+    "categoria": "Incautación de estupefacientes",
+    "cantidad": 6578867597.38,
+    "anio_min": 2010,
+    "anio_max": 2023,
+    "familia": "Resultados operativos",
+    "ultimo_anio_completo": 2021
+  },
+  {
+    "dominio": "operativos",
+    "categoria_slug": "motos",
+    "categoria": "Recuperación de motocicletas",
+    "cantidad": 156264.0,
+    "anio_min": 2010,
+    "anio_max": 2023,
+    "familia": "Resultados operativos",
+    "ultimo_anio_completo": 2022
+  },
+  {
+    "dominio": "operativos",
+    "categoria_slug": "vehiculos",
+    "categoria": "Recuperación de vehículos",
+    "cantidad": 63657.0,
+    "anio_min": 2010,
+    "anio_max": 2023,
+    "familia": "Resultados operativos",
+    "ultimo_anio_completo": 2022
+  }
+]

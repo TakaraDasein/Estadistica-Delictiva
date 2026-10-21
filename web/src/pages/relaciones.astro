@@ -1,0 +1,21 @@
+---
+import Base from "@/layouts/Base.astro";
+import CorrHeatmap from "@/components/charts/CorrHeatmap";
+import GrafoCorrelaciones from "@/components/charts/GrafoCorrelaciones";
+---
+<Base title="Relaciones">
+  <section class="hero">
+    <div class="kicker">Capítulo 4 · Relaciones</div>
+    <h1>Qué delitos viajan juntos</h1>
+    <p class="lede">Si un departamento tiene una tasa alta de un delito, ¿la tiene también de otro? ρ de Spearman entre los 33 departamentos.</p>
+  </section>
+  <section class="chapter">
+    <h2>Grafo de co-ocurrencia</h2>
+    <p>Aristas para |ρ| ≥ 0,5. Se forma un núcleo de violencia (homicidio, extorsión, secuestro) y otro de seguridad vial.</p>
+    <div class="card"><GrafoCorrelaciones client:visible /></div>
+  </section>
+  <section class="chapter">
+    <h2>Matriz completa</h2>
+    <div class="card"><CorrHeatmap client:visible /></div>
+  </section>
+</Base>

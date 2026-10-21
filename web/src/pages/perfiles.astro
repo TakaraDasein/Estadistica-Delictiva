@@ -1,0 +1,21 @@
+---
+import Base from "@/layouts/Base.astro";
+import PerfilBarras from "@/components/charts/PerfilBarras";
+import Subtipos from "@/components/charts/Subtipos";
+---
+<Base title="Perfiles">
+  <section class="hero">
+    <div class="kicker">Capítulo 3 · Perfiles</div>
+    <h1>A quién y con qué</h1>
+    <p class="lede">Género y edad de la víctima, y arma o medio empleado. "No reporta" se muestra en gris: también es información sobre la calidad del registro.</p>
+  </section>
+  <section class="chapter">
+    <h2>Composición por delito</h2>
+    <div class="card"><PerfilBarras client:visible /></div>
+  </section>
+  <section class="chapter">
+    <h2>Por artículo del Código Penal</h2>
+    <p>Delitos sexuales y secuestro publican el artículo en algunos años: la mayor parte de los delitos sexuales registrados son contra menores de 14 años.</p>
+    <div class="card"><Subtipos client:visible /></div>
+  </section>
+</Base>

@@ -1,0 +1,109 @@
+---
+import Base from "@/layouts/Base.astro";
+import TrendExplorer from "@/components/charts/TrendExplorer";
+import MapaCoropletico from "@/components/charts/MapaCoropletico";
+import CovidChart from "@/components/charts/CovidChart";
+import RadialSeason from "@/components/charts/RadialSeason";
+import PerfilBarras from "@/components/charts/PerfilBarras";
+import { RecuperacionChart } from "@/components/charts/Respuesta";
+import ins from "@/data/insights.json";
+import { corto } from "@/lib/data";
+import { num, pct, dec, kmil } from "@/lib/format";
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const covid = ins.covid as Record<string, { abril_2020_vs_2019_pct: number; desvio_pct: number }>;
+const tasaHom = ins.homicidios_tasa as Record<string, number>;
+const eneOct = ins.ene_oct_por_anio as Record<string, number>;
+const crec = ins.crecen_mas;
+---
+<Base title="Relato">
+  <section class="hero">
+    <div class="kicker">Colombia · {ins.periodo[0]}–{ins.periodo[1]} · DIJIN – Policía Nacional</div>
+    <h1>Quince años de delitos en Colombia, contados con datos</h1>
+    <p class="lede">
+      {num(ins.delitos_total)} delitos registrados en {ins.delitos_categorias} categorías, más capturas, incautaciones y
+      recuperaciones. Limpiamos {num(ins.filas_procesadas)} registros de {ins.archivos_conciliados} archivos conciliados contra sus
+      propios totales. Este es el recorrido: cuándo, dónde, a quién y qué respuesta hubo.
+    </p>
+    <div class="grid-3" style="margin-top:24px">
+      <div class="card stat"><span class="v">{kmil(ins.delitos_total)}</span><span class="l">delitos registrados</span><span class="d">2010–2024, 18 categorías</span></div>
+      <div class="card stat"><span class="v">{pct(((eneOct["2024"] / eneOct["2010"]) - 1) * 100, true)}</span><span class="l">más delitos registrados que en 2010</span><span class="d">ene–oct 2024 vs ene–oct 2010</span></div>
+      <div class="card stat"><span class="v">{dec(tasaHom["2010"])} → {dec(tasaHom["2024"])}</span><span class="l">homicidios por 100 mil hab.</span><span class="d">2010 → 2024 (años completos)</span></div>
+    </div>
+  </section>
+
+  <section class="chapter">
+    <div class="kicker"><span class="chapter-num">01</span> · El tiempo</div>
+    <h2>El registro se triplicó, pero no todos los delitos crecieron igual</h2>
+    <p>
+      Lo que más crece es lo que más depende de la denuncia: {crec.map((c) => `${corto(c.categoria_slug).toLowerCase()} (${pct(c.tcac_pct, true)} anual)`).join(", ")}.
+      El homicidio, que casi siempre se registra, se mantuvo estable o bajó. Parte del aumento es mayor
+      reporte, no necesariamente más violencia.
+    </p>
+    <div class="card"><TrendExplorer client:visible /></div>
+    <p class="insight">Lectura: el índice 2010 = 100 compara la <em>forma</em> de cada serie. Una serie en 400 cuadruplicó su registro.</p>
+    <a href={`${base}/tiempo`}>Explorar tendencias, estacionalidad y STL →</a>
+  </section>
+
+  <section class="chapter">
+    <div class="kicker"><span class="chapter-num">02</span> · El choque</div>
+    <h2>La pandemia vació las calles, y los hurtos con ellas</h2>
+    <p>
+      En abril de 2020 el hurto a personas cayó {pct(covid["hurto-personas"].abril_2020_vs_2019_pct)} frente a abril de 2019.
+      La violencia intrafamiliar no: {pct(covid["violencia-intrafamiliar"].abril_2020_vs_2019_pct, true)}. El delito que ocurre en casa no
+      se confinó.
+    </p>
+    <div class="card"><CovidChart client:visible /></div>
+  </section>
+
+  <section class="chapter">
+    <div class="kicker"><span class="chapter-num">03</span> · El calendario</div>
+    <h2>Cada delito tiene su reloj</h2>
+    <p>
+      La violencia intrafamiliar tiene una fuerza estacional de {dec((ins.estacionalidad_vif as { fuerza_estacional: number }).fuerza_estacional)} (de 0 a 1)
+      y el {pct(ins.fin_de_semana_lesiones_pct)} de las lesiones personales ocurre en fin de semana (lo uniforme sería 28,6 %).
+      Los homicidios suben en diciembre.
+    </p>
+    <div class="card"><RadialSeason client:visible /></div>
+  </section>
+
+  <section class="chapter">
+    <div class="kicker"><span class="chapter-num">04</span> · El territorio</div>
+    <h2>El riesgo no se reparte por igual</h2>
+    <p>
+      Diez municipios concentran el {pct(ins.concentracion_hurto_personas.top10_pct)} del hurto a personas (Gini {dec(ins.concentracion_hurto_personas.gini * 100)}/100).
+      En tasas por habitante el mapa cambia: el homicidio pesa más en la periferia que en las capitales.
+    </p>
+    <div class="card"><MapaCoropletico client:visible /></div>
+    <a href={`${base}/territorio`}>Mapa 3D, concentración y tipologías →</a>
+  </section>
+
+  <section class="chapter">
+    <div class="kicker"><span class="chapter-num">05</span> · Las víctimas</div>
+    <h2>Quién es la víctima depende del delito</h2>
+    <p>La violencia intrafamiliar y los delitos sexuales recaen sobre todo en mujeres; el homicidio, en hombres.</p>
+    <div class="card"><PerfilBarras client:visible /></div>
+  </section>
+
+  <section class="chapter">
+    <div class="kicker"><span class="chapter-num">06</span> · La respuesta</div>
+    <h2>Se roba más y se recupera menos</h2>
+    <p>
+      La proporción de motos y vehículos recuperados frente a los hurtados cayó por una década. Por departamento,
+      capturas y delitos van de la mano (ρ = {dec(ins.respuesta_rho)}).
+    </p>
+    <div class="card"><RecuperacionChart client:visible /></div>
+    <a href={`${base}/respuesta`}>Capturas, incautaciones y armas →</a>
+  </section>
+
+  <section class="chapter">
+    <div class="kicker">Advertencias</div>
+    <h2>Qué no dicen estos datos</h2>
+    <p>
+      Son registros policiales, no victimización real: dependen de la denuncia. Algunos años están incompletos
+      (homicidios 2022 llega a agosto; casi todo 2023 llega a octubre) y faltan archivos (homicidios y extorsión 2018,
+      estupefacientes 2022). Por eso las comparaciones usan años completos o el periodo ene–oct.
+      <a href={`${base}/metodologia`}>Ver metodología y auditoría</a>.
+    </p>
+  </section>
+</Base>

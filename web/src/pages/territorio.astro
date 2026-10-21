@@ -1,0 +1,37 @@
+---
+import Base from "@/layouts/Base.astro";
+import MapaCoropletico from "@/components/charts/MapaCoropletico";
+import Mapa3D from "@/components/charts/Mapa3D";
+import Concentracion from "@/components/charts/Concentracion";
+import Tipologias from "@/components/charts/Tipologias";
+---
+<Base title="Territorio">
+  <section class="hero">
+    <div class="kicker">Capítulo 2 · Territorio</div>
+    <h1>Dónde ocurre</h1>
+    <p class="lede">Tasas por 100 mil habitantes con población DANE de cada año y departamento. Bogotá D.C. se trata como unidad propia.</p>
+  </section>
+
+  <section class="chapter">
+    <h2>Mapa coroplético y ranking</h2>
+    <div class="card"><MapaCoropletico client:visible /></div>
+  </section>
+
+  <section class="chapter">
+    <h2>El relieve del riesgo</h2>
+    <p>La misma tasa, levantada en 3D: la altura hace evidente la distancia entre los picos y el resto del país.</p>
+    <div class="card"><Mapa3D client:only="react" /></div>
+  </section>
+
+  <section class="chapter">
+    <h2>Concentración municipal</h2>
+    <p>Pocos municipios explican la mayor parte de los casos. Curva de Lorenz y coeficiente de Gini sobre 2010–2024.</p>
+    <Concentracion client:visible />
+  </section>
+
+  <section class="chapter">
+    <h2>Tipologías territoriales</h2>
+    <p>Clúster jerárquico de Ward sobre el perfil de tasas (log, estandarizadas) de 15 delitos, promedio 2015–2019. Departamentos del mismo grupo comparten su “huella” delictiva, no necesariamente su nivel.</p>
+    <Tipologias client:visible />
+  </section>
+</Base>

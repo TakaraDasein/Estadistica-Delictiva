@@ -1,0 +1,38 @@
+---
+import Base from "@/layouts/Base.astro";
+import AnualBarras from "@/components/charts/AnualBarras";
+import StlChart from "@/components/charts/StlChart";
+import HeatmapSemana from "@/components/charts/HeatmapSemana";
+import MapaCoropletico from "@/components/charts/MapaCoropletico";
+import PerfilBarras from "@/components/charts/PerfilBarras";
+import { catalogo, type Categoria } from "@/lib/data";
+import ins from "@/data/insights.json";
+import { num, pct, dec } from "@/lib/format";
+
+export function getStaticPaths() {
+  return catalogo.map((c) => ({ params: { slug: c.categoria_slug }, props: { c } }));
+}
+const { c } = Astro.props as { c: Categoria };
+const t = (ins.tendencias as Record<string, { direccion: string; tau: number; p_valor: number; tcac_pct: number; sen_pendiente_anual: number; desde: number; hasta: number }>)[c.categoria_slug];
+const delito = c.dominio === "delitos";
+---
+<Base title={c.categoria}>
+  <section class="hero">
+    <div class="kicker">{c.familia}</div>
+    <h1>{c.categoria}</h1>
+    <div class="grid-3">
+      <div class="card stat"><span class="v">{num(c.cantidad)}</span><span class="l">{c.categoria_slug === "droga" ? "gramos" : "casos"} {c.anio_min}–{c.anio_max}</span></div>
+      {t && <div class="card stat"><span class="v">{t.direccion}</span><span class="l">tendencia {t.desde}–{t.hasta}</span><span class="d">Mann-Kendall τ = {dec(t.tau)}, p = {t.p_valor.toFixed(3)}</span></div>}
+      {t && <div class="card stat"><span class="v">{pct(t.tcac_pct, true)}</span><span class="l">crecimiento compuesto anual</span><span class="d">Theil-Sen: {num(t.sen_pendiente_anual)} casos/año</span></div>}
+    </div>
+  </section>
+  <section class="chapter"><h2>Serie anual</h2><div class="card"><AnualBarras client:visible slug={c.categoria_slug} /></div></section>
+  <section class="chapter"><h2>Tendencia mensual</h2><div class="card"><StlChart client:visible inicial={c.categoria_slug} fijo /></div></section>
+  <section class="chapter"><h2>Territorio</h2><div class="card"><MapaCoropletico client:visible inicial={c.categoria_slug} fijo /></div></section>
+  {delito && (
+    <section class="chapter grid-2">
+      <div class="card"><h3>Semana × mes</h3><HeatmapSemana client:visible inicial={c.categoria_slug} fijo /></div>
+      <div class="card"><h3>Arma o medio</h3><PerfilBarras client:visible inicial="arma_grupo" soloSlug={c.categoria_slug} /></div>
+    </section>
+  )}
+</Base>

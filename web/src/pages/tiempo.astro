@@ -1,0 +1,53 @@
+---
+import Base from "@/layouts/Base.astro";
+import TrendExplorer from "@/components/charts/TrendExplorer";
+import SmallMultiples from "@/components/charts/SmallMultiples";
+import StlChart from "@/components/charts/StlChart";
+import RadialSeason from "@/components/charts/RadialSeason";
+import HeatmapSemana from "@/components/charts/HeatmapSemana";
+import CovidChart from "@/components/charts/CovidChart";
+---
+<Base title="Tiempo">
+  <section class="hero">
+    <div class="kicker">Capítulo 1 · Tiempo</div>
+    <h1>Tendencias, ciclos y choques</h1>
+    <p class="lede">Cuatro escalas temporales: la tendencia de 15 años, el ciclo anual, la semana y el choque de 2020.</p>
+  </section>
+
+  <section class="chapter">
+    <h2>Comparar trayectorias</h2>
+    <p>Elige hasta cuatro series. El índice (2010 = 100, sobre ene–oct) compara forma sin que la magnitud domine; la tasa ajusta por población.</p>
+    <div class="card"><TrendExplorer client:visible /></div>
+  </section>
+
+  <section class="chapter">
+    <h2>Todas las series, cada una a su escala</h2>
+    <p>Prueba de Mann-Kendall (α = 0,05) sobre años completos: la etiqueta dice si la tendencia es estadísticamente creciente, decreciente o indistinguible del azar. TCAC = tasa de crecimiento compuesto anual.</p>
+    <SmallMultiples client:visible />
+  </section>
+
+  <section class="chapter">
+    <h2>Señal y ruido: descomposición STL</h2>
+    <p>STL separa la serie mensual en tendencia, estacionalidad y residuo. La línea azul es la tendencia limpia de ciclos.</p>
+    <div class="card"><StlChart client:visible /></div>
+  </section>
+
+  <section class="chapter grid-2">
+    <div class="card">
+      <h3>Reloj estacional</h3>
+      <p class="sub">Índice por mes (100 = mes promedio), componente estacional de STL.</p>
+      <RadialSeason client:visible />
+    </div>
+    <div class="card">
+      <h3>Semana × mes</h3>
+      <p class="sub">¿Qué días y meses concentran los casos?</p>
+      <HeatmapSemana client:visible />
+    </div>
+  </section>
+
+  <section class="chapter">
+    <h2>El choque de 2020</h2>
+    <p>Dos contrafactuales: abril de 2020 frente a abril de 2019 (confinamiento estricto) y el año 2020 frente a la recta ajustada a 2015–2019.</p>
+    <div class="card"><CovidChart client:visible /></div>
+  </section>
+</Base>

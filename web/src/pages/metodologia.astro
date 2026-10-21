@@ -1,0 +1,64 @@
+---
+import Base from "@/layouts/Base.astro";
+import Cobertura from "@/components/charts/Cobertura";
+import ins from "@/data/insights.json";
+import { num } from "@/lib/format";
+
+const pasos = [
+  ["00 · Inventario", "Cataloga 340 libros Excel / 345 hojas: dominio, año, fila de encabezado, hash. Detecta archivos mal ubicados, duplicados y huecos de cobertura."],
+  ["01 · Bronze", "Ingesta fiel de cada hoja (todo como texto). Descarta archivos con contenido idéntico (p. ej. *_2018_0 y *_2018_1). Nunca deduplica filas: dos filas iguales son dos eventos."],
+  ["02 · Silver", "Esquema canónico (31 alias de encabezado), reparación de columnas desplazadas detectada por contenido, exclusión de filas TOTAL y pies de página, fechas (ISO, serial Excel), DANE → municipio/departamento, catálogos controlados."],
+  ["03 · Calidad", "Conciliación contra el TOTAL que declara cada archivo, cobertura mensual por año, completitud de dimensiones, concentración de colas, coherencia de fechas."],
+  ["04 · Gold", "Tablas analíticas: series anual y mensual, departamento×año con tasa por 100 mil (población DANE), municipios, perfiles, subtipos, clases de bien, recuperación."],
+  ["05 · Estadística", "Mann-Kendall + Theil-Sen, contrafactual COVID, STL, V de Cramér, Gini/Lorenz, Spearman, clúster de Ward."],
+  ["06 · Publicar", "Contrato JSON compacto para la web (public/data) + resumen de cifras para el relato (src/data)."],
+];
+---
+<Base title="Metodología">
+  <section class="hero">
+    <div class="kicker">Método y auditoría</div>
+    <h1>Cómo se construyeron estas cifras</h1>
+    <p class="lede">Pipeline reproducible en pandas con arquitectura medallion (raw → bronze → silver → gold). {num(ins.filas_procesadas)} registros limpios; {ins.archivos_conciliados} de {ins.archivos_conciliados} archivos con total declarado concilian con diferencia &lt; 0,5 %.</p>
+  </section>
+
+  <section class="chapter">
+    <h2>Pasos del pipeline</h2>
+    <div class="grid-2">{pasos.map(([t, d]) => <div class="card"><h3>{t}</h3><p class="sub" style="margin:0">{d}</p></div>)}</div>
+  </section>
+
+  <section class="chapter">
+    <h2>Hallazgos de la auditoría de datos</h2>
+    <div class="table-scroll"><table>
+      <thead><tr><th>Problema en la fuente</th><th>Tratamiento</th></tr></thead>
+      <tbody>
+        <tr><td>Filas TOTAL con la suma del archivo (inflaban ~25 % los delitos y ~45 % la droga)</td><td>Excluidas; su valor se usa para conciliar</td></tr>
+        <tr><td>Columnas intercambiadas: género↔edad (capturas 2022), departamento↔arma (delitos sexuales 2021, hurto a comercio 2013)</td><td>Reparación fila a fila por contenido</td></tr>
+        <tr><td>"Abigeato" (2010–22) renombrado "Hurto a cabezas de ganado" (2023–24)</td><td>Serie unificada</td></tr>
+        <tr><td>Archivo de lesiones en tránsito 2014 dentro de la carpeta de homicidios en tránsito</td><td>Reubicado</td></tr>
+        <tr><td>Exportaciones duplicadas de 2018 (lesiones, VIF, terrorismo, lesiones en tránsito)</td><td>Descartadas por huella de contenido</td></tr>
+        <tr><td>Fechas como texto "AAAA-MM-DD hh:mm:ss" o serial de Excel (capturas 2020, droga 2023)</td><td>Parser multiformato</td></tr>
+        <tr><td>Totales de armas 2010–2018 con punto de miles (44.563)</td><td>Interpretados ×1000 en la conciliación</td></tr>
+        <tr><td>Años parciales (2023 hasta oct., homicidios 2022 hasta ago.) y años sin archivo</td><td>Marcados; comparaciones con años completos o ene–oct</td></tr>
+        <tr><td>Bogotá registrada dentro de Cundinamarca en algunos archivos</td><td>Departamento derivado del código DANE (11 ≠ 25)</td></tr>
+      </tbody>
+    </table></div>
+    <p class="note">Detalle completo: <code>data/reports/calidad.json</code>, <code>inventario.json</code> y <code>docs/02-auditoria.md</code>.</p>
+  </section>
+
+  <section class="chapter">
+    <h2>Cobertura de la fuente</h2>
+    <div class="card"><Cobertura client:visible /></div>
+  </section>
+
+  <section class="chapter">
+    <h2>Decisiones estadísticas</h2>
+    <ul>
+      <li><b>Tasas por 100 mil</b> con la población DANE del mismo año y departamento (proyecciones censo 2018; desde 2020, actualización post COVID-19).</li>
+      <li><b>Tendencia</b>: Mann-Kendall no paramétrico (robusto a no normalidad), pendiente de Theil-Sen; sólo años completos.</li>
+      <li><b>Estacionalidad</b>: STL robusto sobre log(1+x), periodo 12; fuerza estacional de Wang–Smith–Hyndman.</li>
+      <li><b>Día de la semana</b>: V de Cramér como tamaño de efecto (con millones de casos el p-valor de χ² siempre es ~0).</li>
+      <li><b>Correlaciones y clústeres</b>: ventana estable 2015–2019 (completa y prepandemia).</li>
+      <li><b>Límites</b>: registros administrativos dependen de la denuncia; cambios de sistema de registro (2017, integración con Fiscalía) pueden producir saltos de nivel.</li>
+    </ul>
+  </section>
+</Base>

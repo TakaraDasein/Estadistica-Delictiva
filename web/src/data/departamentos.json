@@ -1,0 +1,200 @@
+[
+  {
+    "cod_dpto": "05",
+    "departamento": "Antioquia",
+    "region": "Andina",
+    "poblacion": 6848360
+  },
+  {
+    "cod_dpto": "08",
+    "departamento": "Atlántico",
+    "region": "Caribe",
+    "poblacion": 2803565
+  },
+  {
+    "cod_dpto": "11",
+    "departamento": "Bogotá D.C.",
+    "region": "Andina",
+    "poblacion": 7907281
+  },
+  {
+    "cod_dpto": "13",
+    "departamento": "Bolívar",
+    "region": "Caribe",
+    "poblacion": 2247283
+  },
+  {
+    "cod_dpto": "15",
+    "departamento": "Boyacá",
+    "region": "Andina",
+    "poblacion": 1298800
+  },
+  {
+    "cod_dpto": "17",
+    "departamento": "Caldas",
+    "region": "Andina",
+    "poblacion": 1040284
+  },
+  {
+    "cod_dpto": "18",
+    "departamento": "Caquetá",
+    "region": "Amazonía",
+    "poblacion": 425053
+  },
+  {
+    "cod_dpto": "19",
+    "departamento": "Cauca",
+    "region": "Pacífica",
+    "poblacion": 1558045
+  },
+  {
+    "cod_dpto": "20",
+    "departamento": "Cesar",
+    "region": "Caribe",
+    "poblacion": 1373581
+  },
+  {
+    "cod_dpto": "23",
+    "departamento": "Córdoba",
+    "region": "Caribe",
+    "poblacion": 1898911
+  },
+  {
+    "cod_dpto": "25",
+    "departamento": "Cundinamarca",
+    "region": "Andina",
+    "poblacion": 3445327
+  },
+  {
+    "cod_dpto": "27",
+    "departamento": "Chocó",
+    "region": "Pacífica",
+    "poblacion": 595138
+  },
+  {
+    "cod_dpto": "41",
+    "departamento": "Huila",
+    "region": "Andina",
+    "poblacion": 1178453
+  },
+  {
+    "cod_dpto": "44",
+    "departamento": "La Guajira",
+    "region": "Caribe",
+    "poblacion": 1038397
+  },
+  {
+    "cod_dpto": "47",
+    "departamento": "Magdalena",
+    "region": "Caribe",
+    "poblacion": 1496163
+  },
+  {
+    "cod_dpto": "50",
+    "departamento": "Meta",
+    "region": "Orinoquía",
+    "poblacion": 1130085
+  },
+  {
+    "cod_dpto": "52",
+    "departamento": "Nariño",
+    "region": "Pacífica",
+    "poblacion": 1699570
+  },
+  {
+    "cod_dpto": "54",
+    "departamento": "Norte de Santander",
+    "region": "Andina",
+    "poblacion": 1696740
+  },
+  {
+    "cod_dpto": "63",
+    "departamento": "Quindío",
+    "region": "Andina",
+    "poblacion": 563076
+  },
+  {
+    "cod_dpto": "66",
+    "departamento": "Risaralda",
+    "region": "Andina",
+    "poblacion": 972304
+  },
+  {
+    "cod_dpto": "68",
+    "departamento": "Santander",
+    "region": "Andina",
+    "poblacion": 2357127
+  },
+  {
+    "cod_dpto": "70",
+    "departamento": "Sucre",
+    "region": "Caribe",
+    "poblacion": 994060
+  },
+  {
+    "cod_dpto": "73",
+    "departamento": "Tolima",
+    "region": "Andina",
+    "poblacion": 1374384
+  },
+  {
+    "cod_dpto": "76",
+    "departamento": "Valle del Cauca",
+    "region": "Pacífica",
+    "poblacion": 4638029
+  },
+  {
+    "cod_dpto": "81",
+    "departamento": "Arauca",
+    "region": "Orinoquía",
+    "poblacion": 313097
+  },
+  {
+    "cod_dpto": "85",
+    "departamento": "Casanare",
+    "region": "Orinoquía",
+    "poblacion": 467775
+  },
+  {
+    "cod_dpto": "86",
+    "departamento": "Putumayo",
+    "region": "Amazonía",
+    "poblacion": 383042
+  },
+  {
+    "cod_dpto": "88",
+    "departamento": "San Andrés y Providencia",
+    "region": "Insular",
+    "poblacion": 62269
+  },
+  {
+    "cod_dpto": "91",
+    "departamento": "Amazonas",
+    "region": "Amazonía",
+    "poblacion": 85056
+  },
+  {
+    "cod_dpto": "94",
+    "departamento": "Guainía",
+    "region": "Amazonía",
+    "poblacion": 56551
+  },
+  {
+    "cod_dpto": "95",
+    "departamento": "Guaviare",
+    "region": "Amazonía",
+    "poblacion": 97616
+  },
+  {
+    "cod_dpto": "97",
+    "departamento": "Vaupés",
+    "region": "Amazonía",
+    "poblacion": 46777
+  },
+  {
+    "cod_dpto": "99",
+    "departamento": "Vichada",
+    "region": "Orinoquía",
+    "poblacion": 123304
+  }
+]

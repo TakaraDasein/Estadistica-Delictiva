@@ -1,0 +1,11 @@
+node_modules/
+web/dist/
+web/.astro/
+data/bronze/
+data/silver/
+data/gold/
+data/reports/
+pipeline/.venv/
+pipeline/scratch/
+__pycache__/
+data/raw/

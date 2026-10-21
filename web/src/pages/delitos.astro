@@ -1,0 +1,15 @@
+---
+import Base from "@/layouts/Base.astro";
+import SmallMultiples from "@/components/charts/SmallMultiples";
+---
+<Base title="Delitos">
+  <section class="hero">
+    <div class="kicker">Fichas</div>
+    <h1>Un delito a la vez</h1>
+    <p class="lede">Cada ficha reúne serie anual, tendencia, calendario, mapa y perfil de víctimas.</p>
+  </section>
+  <h2>Delitos</h2>
+  <SmallMultiples client:visible />
+  <h2 style="margin-top:32px">Resultados operativos</h2>
+  <SmallMultiples client:visible dominio="operativos" />
+</Base>
