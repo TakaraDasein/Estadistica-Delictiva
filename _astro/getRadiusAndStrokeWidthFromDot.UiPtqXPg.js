@@ -1,0 +1,1 @@
+import{fi as e}from"./CategoricalChart.9XBIMy1-.js";function t(t){var n=e(t),r=3,i=2;if(n!=null){var a=n.r,o=n.strokeWidth,s=Number(a),c=Number(o);return(Number.isNaN(s)||s<0)&&(s=r),(Number.isNaN(c)||c<0)&&(c=i),{r:s,strokeWidth:c}}return{r,strokeWidth:i}}export{t};
